@@ -6,7 +6,7 @@
     <title>AREX | BAAI</title>
     <meta
       name="description"
-      content="AREX is an agent released by BAAI with deep search, reasoning, and agentic research capabilities."
+      content="AREX is a family of efficient long-horizon research agents with agentic context management, robust tool use, and strong deep-search reasoning."
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -34,8 +34,16 @@
           <span class="side-nav-index">03</span>
           <span class="side-label">Capabilities</span>
         </a>
-        <a href="#release">
+        <a href="#training">
           <span class="side-nav-index">04</span>
+          <span class="side-label">Training</span>
+        </a>
+        <a href="#use-cases">
+          <span class="side-nav-index">05</span>
+          <span class="side-label">Use Cases</span>
+        </a>
+        <a href="#release">
+          <span class="side-nav-index">06</span>
           <span class="side-label">Release</span>
         </a>
       </nav>
@@ -52,12 +60,13 @@
           <section class="cover" aria-labelledby="title">
             <div class="article-meta-row">
               <span>BAAI</span>
-              <span>Agent Release</span>
+              <span>Efficient Long-Horizon Research Agents</span>
             </div>
             <h1 id="title">AREX</h1>
             <p class="lead">
-              AREX is an agent released by BAAI for deep search, reasoning, and
-              research-oriented problem solving.
+              AREX is a family of efficient foundation models for deep research agents:
+              built to gather high-value evidence, manage long contexts autonomously,
+              and solve research-style problems under practical interaction and compute budgets.
             </p>
             <p class="affiliation">Beijing Academy of Artificial Intelligence</p>
 
@@ -79,16 +88,34 @@
                 <strong>Code</strong>
               </a>
             </div>
+
+            <div class="model-strip" aria-label="AREX model options">
+              <div class="model-card model-card-turbo">
+                <span class="model-name">AREX-Turbo</span>
+                <p>Dense deployment option for resource-constrained and low-latency research workflows.</p>
+              </div>
+              <div class="model-card model-card-base">
+                <span class="model-name">AREX-Base</span>
+                <p>Sparse-expert deployment option for stronger long-horizon reasoning at controlled serving cost.</p>
+              </div>
+            </div>
           </section>
 
           <section id="overview" class="content-section">
             <h2>Overview</h2>
-            <h3>Agentic research with search and reasoning</h3>
+            <h3>Research agents that optimize information gain</h3>
             <p>
-              AREX is designed as a general agent for information-seeking tasks
-              that require more than a single lookup. It can search across
-              sources, connect evidence, and reason through multi-step questions
-              before producing an answer.
+              AREX is designed for long-horizon tasks where a single retrieval step
+              is not enough. Instead of relying only on larger inference budgets,
+              AREX emphasizes efficient agent behavior: when to search, what to read,
+              which evidence to keep, when to compress prior reasoning, and when to
+              stop and synthesize.
+            </p>
+            <p>
+              The system is trained for deep search, broad investigation, paper
+              reading, and expert-style verification scenarios. Its goal is to make
+              research agents both capable and deployable: strong reasoning and tool
+              use with a smaller active compute footprint.
             </p>
           </section>
 
@@ -120,36 +147,82 @@
             <h3>Built for long-horizon problem solving</h3>
             <div class="capability-grid">
               <div class="capability-card">
-                <h4>Deep Search</h4>
+                <h4>Efficiency-First Search</h4>
                 <p>
-                  Explores complex questions through iterative search,
-                  comparison, and evidence gathering.
+                  Optimizes each interaction for useful information gain, reducing
+                  unnecessary browsing, inference cost, and response latency.
                 </p>
               </div>
               <div class="capability-card">
-                <h4>Reasoning</h4>
+                <h4>Agentic Context Management</h4>
                 <p>
-                  Breaks down tasks, follows intermediate findings, and forms
-                  answers from connected context.
+                  Treats context as an active workspace, deciding when to preserve
+                  notes, compress old reasoning, and retrieve key evidence.
                 </p>
               </div>
               <div class="capability-card">
-                <h4>Agent Workflow</h4>
+                <h4>Robust Tool Use</h4>
                 <p>
-                  Coordinates search, reading, synthesis, and final response
-                  generation in a single agent loop.
+                  Supports multi-round browsing, retrieval, data analysis, and
+                  verification workflows needed by complex open-domain questions.
                 </p>
               </div>
             </div>
           </section>
 
+          <section id="training" class="content-section training-section">
+            <h2>Training</h2>
+            <h3>A staged recipe for research behavior</h3>
+            <p>
+              AREX uses a progressive training pipeline that first establishes
+              reliable tool and reasoning behavior, then improves long-horizon
+              decision making through agentic reinforcement learning.
+            </p>
+            <div class="training-grid" aria-label="AREX training stages">
+              <div class="process-card">
+                <span>01</span>
+                <h4>Capability-Oriented Synthetic Data</h4>
+                <p>High-quality trajectories for deep research, broad survey, paper reading, and expert verification tasks.</p>
+              </div>
+              <div class="process-card">
+                <span>02</span>
+                <h4>Supervised Fine-Tuning</h4>
+                <p>Establishes the base tool-calling format, research loop structure, and stepwise reasoning behavior.</p>
+              </div>
+              <div class="process-card">
+                <span>03</span>
+                <h4>Agentic Reinforcement Learning</h4>
+                <p>Rewards decisions about when to search, when to stop, and how to summarize evidence efficiently.</p>
+              </div>
+              <div class="process-card">
+                <span>04</span>
+                <h4>Mixed-Domain Consolidation</h4>
+                <p>Integrates multiple task domains to stabilize performance and reduce catastrophic forgetting.</p>
+              </div>
+            </div>
+            <p class="data-note">
+              Training data is kept separate from public benchmark test sets to protect evaluation integrity.
+            </p>
+          </section>
+
+          <section id="use-cases" class="content-section">
+            <h2>Use Cases</h2>
+            <h3>Designed for research-heavy workflows</h3>
+            <div class="use-case-list">
+              <div>Automated scientific literature review and evidence synthesis.</div>
+              <div>Multi-round commercial, market, and competitor research across websites.</div>
+              <div>Question answering systems that require complex reasoning chains and tool calls.</div>
+              <div>Autonomous analysis of long documents spanning dozens or hundreds of pages.</div>
+            </div>
+          </section>
+
           <section id="release" class="content-section release-section">
             <h2>Release</h2>
-            <h3>Released by BAAI</h3>
+            <h3>AREX-Turbo and AREX-Base</h3>
             <p>
-              AREX is presented as a BAAI agent focused on deep search and
-              reasoning capabilities for research-style tasks. The public
-              announcement is available through
+              AREX is presented as a BAAI family of efficient long-horizon research
+              agents. Public model resources and the technical report will be linked
+              as they become available through
               <a href="https://huggingface.co/BAAI" target="_blank" rel="noopener">BAAI</a>.
             </p>
           </section>
@@ -162,7 +235,7 @@
       </footer>
     </div>
     <script>
-      const AREX_LABELS = new Set(["AREX-base", "AREX-turbo"]);
+      const AREX_LABELS = new Set(["AREX-Base", "AREX-Turbo"]);
 
       const MODEL_ICONS = {
         "GPT-5.4": "figure/openai.png",
@@ -185,8 +258,8 @@
         "MiroThinker-1.7": "figure/mirothinker.png",
         "MiroThinker-H1": "figure/mirothinker.png",
         "Fort-Searcher": "figure/rucaibox.png",
-        "AREX-base": "figure/arex.png",
-        "AREX-turbo": "figure/arex.png"
+        "AREX-Base": "figure/arex.png",
+        "AREX-Turbo": "figure/arex.png"
       };
 
       const benchmarkCharts = [
@@ -194,9 +267,9 @@
           title: "BrowseComp",
           bars: [
             { label: "Kimi-K2.6", value: 86.3, role: "closed" },
-            { label: "AREX-base", value: 82.5, role: "arex-base" },
+            { label: "AREX-Base", value: 82.5, role: "arex-base" },
             { label: "GLM-5", value: 79.3, role: "open" },
-            { label: "AREX-turbo", value: 70.7, role: "arex-turbo" },
+            { label: "AREX-Turbo", value: 70.7, role: "arex-turbo" },
             { label: "Quest-35B", value: 64.6, role: "open" },
             { label: "Qwen3.5-35B", value: 61.0, role: "open" },
             { label: "GPT-5", value: 54.9, role: "closed" },
@@ -207,9 +280,9 @@
           title: "GAIA",
           bars: [
             { label: "MiroThinker-H1", value: 88.5, role: "open" },
-            { label: "AREX-base", value: 85.4, role: "arex-base" },
+            { label: "AREX-Base", value: 85.4, role: "arex-base" },
             { label: "DeepSeek-V4-Flash", value: 83.5, role: "closed" },
-            { label: "AREX-turbo", value: 81.6, role: "arex-turbo" },
+            { label: "AREX-Turbo", value: 81.6, role: "arex-turbo" },
             { label: "Quest-35B", value: 80.8, role: "open" },
             { label: "Gemini-3.1-Pro", value: 80.6, role: "closed" },
             { label: "Qwen3.5-35B", value: 80.0, role: "open" },
@@ -220,9 +293,9 @@
           title: "xbench-2510",
           bars: [
             { label: "Kimi-K2.6", value: 90.0, role: "closed" },
-            { label: "AREX-base", value: 71.0, role: "arex-base" },
+            { label: "AREX-Base", value: 71.0, role: "arex-base" },
             { label: "MiroThinker-1.7", value: 62.0, role: "open" },
-            { label: "AREX-turbo", value: 57.0, role: "arex-turbo" },
+            { label: "AREX-Turbo", value: 57.0, role: "arex-turbo" },
             { label: "Tongyi-DeepResearch", value: 55.0, role: "open" },
             { label: "Gemini-3.1-Pro", value: 53.0, role: "closed" },
             { label: "Qwen3.5-35B", value: 50.3, role: "open" }
@@ -232,9 +305,9 @@
           title: "DeepSearchQA",
           bars: [
             { label: "Gemini-3.1-Pro", value: 93.3, role: "closed" },
-            { label: "AREX-base", value: 89.9, role: "arex-base" },
+            { label: "AREX-Base", value: 89.9, role: "arex-base" },
             { label: "MiroThinker-H1", value: 80.6, role: "open" },
-            { label: "AREX-turbo", value: 78.5, role: "arex-turbo" },
+            { label: "AREX-Turbo", value: 78.5, role: "arex-turbo" },
             { label: "Gemini-3.0-Pro", value: 76.9, role: "closed" },
             { label: "MiroThinker-1.7", value: 72.1, role: "open" },
             { label: "MiroThinker-1.7-mini", value: 67.9, role: "open" }
@@ -243,11 +316,11 @@
         {
           title: "WideSearch",
           bars: [
-            { label: "AREX-base", value: 82.0, role: "arex-base" },
+            { label: "AREX-Base", value: 82.0, role: "arex-base" },
             { label: "Kimi-K2.6", value: 80.8, role: "closed" },
             { label: "Qwen3.5-397B", value: 74.0, role: "open" },
             { label: "Qwen3.5-122B", value: 73.2, role: "open" },
-            { label: "AREX-turbo", value: 68.5, role: "arex-turbo" },
+            { label: "AREX-Turbo", value: 68.5, role: "arex-turbo" },
             { label: "Quest-35B", value: 64.5, role: "open" },
             { label: "GPT-5", value: 59.7, role: "closed" },
             { label: "Gemini-3.0-Pro", value: 57.0, role: "closed" }
@@ -257,9 +330,9 @@
           title: "HLE",
           bars: [
             { label: "GPT-5.4", value: 52.1, role: "closed" },
-            { label: "AREX-base", value: 51.8, role: "arex-base" },
+            { label: "AREX-Base", value: 51.8, role: "arex-base" },
             { label: "Qwen3.5-397B", value: 48.3, role: "open" },
-            { label: "AREX-turbo", value: 40.6, role: "arex-turbo" },
+            { label: "AREX-Turbo", value: 40.6, role: "arex-turbo" },
             { label: "Quest-35B", value: 37.6, role: "open" },
             { label: "MiroThinker-1.7-mini", value: 36.4, role: "open" },
             { label: "GPT-5", value: 35.2, role: "closed" },

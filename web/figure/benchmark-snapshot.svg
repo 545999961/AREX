@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1160" viewBox="0 0 1280 1160" role="img" aria-labelledby="title desc">
   <title id="title">AREX benchmark snapshot</title>
-  <desc id="desc">Curated benchmark comparison for AREX-base and AREX-turbo across six search and reasoning benchmarks. Bars use a local scale within each benchmark.</desc>
+  <desc id="desc">Curated benchmark comparison for AREX-Base and AREX-Turbo across six search and reasoning benchmarks. Bars use a local scale within each benchmark.</desc>
   <defs>
     <style>
       .bg { fill: #f7f7f8; } .panel { fill: #ffffff; stroke: #e4e7ec; stroke-width: 1; } .grid { stroke: rgba(0,47,167,.08); stroke-width: 1; }
@@ -34,7 +34,7 @@
     <rect class="arex-row" x="12" y="68" width="552" height="24" rx="8"/>
     <circle class="logo-bg" cx="31" cy="81" r="11"/>
     <use href="#logo-arex" x="22" y="72"/>
-    <text class="label" x="50" y="85">AREX-base</text>
+    <text class="label" x="50" y="85">AREX-Base</text>
     <rect class="track" x="248" y="75" width="250" height="11" rx="5.5"/>
     <rect x="248" y="75" width="231.8" height="11" rx="5.5" fill="#002fa7"/>
     <text class="value" x="534" y="85" text-anchor="end">82.5</text>
@@ -47,7 +47,7 @@
     <rect class="arex-row" x="12" y="122" width="552" height="24" rx="8"/>
     <circle class="logo-bg" cx="31" cy="135" r="11"/>
     <use href="#logo-arex" x="22" y="126"/>
-    <text class="label" x="50" y="139">AREX-turbo</text>
+    <text class="label" x="50" y="139">AREX-Turbo</text>
     <rect class="track" x="248" y="129" width="250" height="11" rx="5.5"/>
     <rect x="248" y="129" width="175.5" height="11" rx="5.5" fill="#0b8f78"/>
     <text class="value" x="534" y="139" text-anchor="end">70.7</text>
@@ -88,7 +88,7 @@
     <rect class="arex-row" x="12" y="68" width="552" height="24" rx="8"/>
     <circle class="logo-bg" cx="31" cy="81" r="11"/>
     <use href="#logo-arex" x="22" y="72"/>
-    <text class="label" x="50" y="85">AREX-base</text>
+    <text class="label" x="50" y="85">AREX-Base</text>
     <rect class="track" x="248" y="75" width="250" height="11" rx="5.5"/>
     <rect x="248" y="75" width="197.5" height="11" rx="5.5" fill="#002fa7"/>
     <text class="value" x="534" y="85" text-anchor="end">85.4</text>
@@ -101,7 +101,7 @@
     <rect class="arex-row" x="12" y="122" width="552" height="24" rx="8"/>
     <circle class="logo-bg" cx="31" cy="135" r="11"/>
     <use href="#logo-arex" x="22" y="126"/>
-    <text class="label" x="50" y="139">AREX-turbo</text>
+    <text class="label" x="50" y="139">AREX-Turbo</text>
     <rect class="track" x="248" y="129" width="250" height="11" rx="5.5"/>
     <rect x="248" y="129" width="133.1" height="11" rx="5.5" fill="#0b8f78"/>
     <text class="value" x="534" y="139" text-anchor="end">81.6</text>
@@ -142,7 +142,7 @@
     <rect class="arex-row" x="12" y="68" width="552" height="24" rx="8"/>
     <circle class="logo-bg" cx="31" cy="81" r="11"/>
     <use href="#logo-arex" x="22" y="72"/>
-    <text class="label" x="50" y="85">AREX-base</text>
+    <text class="label" x="50" y="85">AREX-Base</text>
     <rect class="track" x="248" y="75" width="250" height="11" rx="5.5"/>
     <rect x="248" y="75" width="151.9" height="11" rx="5.5" fill="#002fa7"/>
     <text class="value" x="534" y="85" text-anchor="end">71</text>
@@ -155,7 +155,7 @@
     <rect class="arex-row" x="12" y="122" width="552" height="24" rx="8"/>
     <circle class="logo-bg" cx="31" cy="135" r="11"/>
     <use href="#logo-arex" x="22" y="126"/>
-    <text class="label" x="50" y="139">AREX-turbo</text>
+    <text class="label" x="50" y="139">AREX-Turbo</text>
     <rect class="track" x="248" y="129" width="250" height="11" rx="5.5"/>
     <rect x="248" y="129" width="79.6" height="11" rx="5.5" fill="#0b8f78"/>
     <text class="value" x="534" y="139" text-anchor="end">57</text>
@@ -190,7 +190,7 @@
     <rect class="arex-row" x="12" y="68" width="552" height="24" rx="8"/>
     <circle class="logo-bg" cx="31" cy="81" r="11"/>
     <use href="#logo-arex" x="22" y="72"/>
-    <text class="label" x="50" y="85">AREX-base</text>
+    <text class="label" x="50" y="85">AREX-Base</text>
     <rect class="track" x="248" y="75" width="250" height="11" rx="5.5"/>
     <rect x="248" y="75" width="222.6" height="11" rx="5.5" fill="#002fa7"/>
     <text class="value" x="534" y="85" text-anchor="end">89.9</text>
@@ -203,7 +203,7 @@
     <rect class="arex-row" x="12" y="122" width="552" height="24" rx="8"/>
     <circle class="logo-bg" cx="31" cy="135" r="11"/>
     <use href="#logo-arex" x="22" y="126"/>
-    <text class="label" x="50" y="139">AREX-turbo</text>
+    <text class="label" x="50" y="139">AREX-Turbo</text>
     <rect class="track" x="248" y="129" width="250" height="11" rx="5.5"/>
     <rect x="248" y="129" width="130.6" height="11" rx="5.5" fill="#0b8f78"/>
     <text class="value" x="534" y="139" text-anchor="end">78.5</text>
@@ -232,7 +232,7 @@
     <rect class="arex-row" x="12" y="41" width="552" height="24" rx="8"/>
     <circle class="logo-bg" cx="31" cy="54" r="11"/>
     <use href="#logo-arex" x="22" y="45"/>
-    <text class="label" x="50" y="58">AREX-base</text>
+    <text class="label" x="50" y="58">AREX-Base</text>
     <rect class="track" x="248" y="48" width="250" height="11" rx="5.5"/>
     <rect x="248" y="48" width="250.0" height="11" rx="5.5" fill="#002fa7"/>
     <text class="value" x="534" y="58" text-anchor="end">82</text>
@@ -257,7 +257,7 @@
     <rect class="arex-row" x="12" y="149" width="552" height="24" rx="8"/>
     <circle class="logo-bg" cx="31" cy="162" r="11"/>
     <use href="#logo-arex" x="22" y="153"/>
-    <text class="label" x="50" y="166">AREX-turbo</text>
+    <text class="label" x="50" y="166">AREX-Turbo</text>
     <rect class="track" x="248" y="156" width="250" height="11" rx="5.5"/>
     <rect x="248" y="156" width="139.3" height="11" rx="5.5" fill="#0b8f78"/>
     <text class="value" x="534" y="166" text-anchor="end">68.5</text>
@@ -292,7 +292,7 @@
     <rect class="arex-row" x="12" y="68" width="552" height="24" rx="8"/>
     <circle class="logo-bg" cx="31" cy="81" r="11"/>
     <use href="#logo-arex" x="22" y="72"/>
-    <text class="label" x="50" y="85">AREX-base</text>
+    <text class="label" x="50" y="85">AREX-Base</text>
     <rect class="track" x="248" y="75" width="250" height="11" rx="5.5"/>
     <rect x="248" y="75" width="246.8" height="11" rx="5.5" fill="#002fa7"/>
     <text class="value" x="534" y="85" text-anchor="end">51.8</text>
@@ -305,7 +305,7 @@
     <rect class="arex-row" x="12" y="122" width="552" height="24" rx="8"/>
     <circle class="logo-bg" cx="31" cy="135" r="11"/>
     <use href="#logo-arex" x="22" y="126"/>
-    <text class="label" x="50" y="139">AREX-turbo</text>
+    <text class="label" x="50" y="139">AREX-Turbo</text>
     <rect class="track" x="248" y="129" width="250" height="11" rx="5.5"/>
     <rect x="248" y="129" width="127.2" height="11" rx="5.5" fill="#0b8f78"/>
     <text class="value" x="534" y="139" text-anchor="end">40.6</text>
