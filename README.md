@@ -14,19 +14,14 @@
 
 AREX is an agent released by BAAI for information-seeking tasks that require deep search, multi-step reasoning, and evidence synthesis. It is designed to explore sources, connect findings, and produce answers for research-style problems.
 
-The project website is available at:
-
-```text
-https://545999961.github.io/AREX/
-```
 
 ## Table of Contents
 
 - [News](#news)
 - [Introduction](#introduction)
+- [Benchmark Evaluation](#benchmark-evaluation)
 - [Key Capabilities](#key-capabilities)
 - [Resources](#resources)
-- [Repository Layout](#repository-layout)
 - [Citation](#citation)
 - [Star History](#star-history)
 
@@ -37,6 +32,14 @@ https://545999961.github.io/AREX/
 ## Introduction
 
 AREX focuses on agentic research workflows where a single retrieval step is not enough. It can be used to present and organize work around deep search, reasoning, and agent loop capabilities.
+
+## Benchmark Evaluation
+
+<div align="center">
+
+![AREX benchmark snapshot](web/figure/benchmark-snapshot.svg)
+
+</div>
 
 ## Key Capabilities
 
@@ -51,19 +54,6 @@ AREX focuses on agentic research workflows where a single retrieval step is not 
 | Paper | Coming soon |
 | AREX-Turbo | Coming soon |
 | AREX-Base | Coming soon |
-
-## Repository Layout
-
-```text
-.
-├── README.md
-└── web/
-    ├── index.html
-    ├── styles.css
-    └── .nojekyll
-```
-
-The `web/` directory contains the GitHub Pages site.
 
 ## Citation
 

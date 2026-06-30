@@ -420,6 +420,136 @@ h1 {
   text-align: left;
 }
 
+.benchmark-section {
+  background:
+    linear-gradient(90deg, rgba(0, 47, 167, 0.05) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(0, 47, 167, 0.05) 1px, transparent 1px),
+    #ffffff;
+  background-size: 44px 44px;
+}
+
+.benchmark-comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 34px;
+}
+
+.benchmark-card {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 9px 28px rgba(17, 24, 39, 0.06);
+}
+
+.benchmark-card-heading {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 14px;
+}
+
+.benchmark-card h4 {
+  min-width: 0;
+  color: var(--text);
+  font-size: 1.02rem;
+  font-weight: 850;
+  line-height: 1.2;
+}
+
+.benchmark-card-heading span {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 800;
+}
+
+.benchmark-chart {
+  display: grid;
+  gap: 5px;
+}
+
+.benchmark-row {
+  display: grid;
+  grid-template-columns: minmax(154px, 1.25fr) minmax(92px, 1fr) 42px;
+  align-items: center;
+  gap: 9px;
+  min-height: 30px;
+  padding: 2px 0;
+}
+
+.benchmark-row.is-arex {
+  margin-right: -6px;
+  margin-left: -6px;
+  padding: 2px 6px;
+  border-radius: 8px;
+  background: var(--accent-soft);
+}
+
+.benchmark-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.benchmark-icon {
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #ffffff;
+  object-fit: contain;
+  padding: 2px;
+}
+
+.benchmark-name {
+  min-width: 0;
+  overflow: hidden;
+  color: #263241;
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1.1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.benchmark-track {
+  position: relative;
+  display: block;
+  height: 12px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e7ebf1;
+}
+
+.benchmark-fill {
+  display: block;
+  width: var(--bar-width);
+  height: 100%;
+  border-radius: inherit;
+  background: var(--bar-color);
+}
+
+.benchmark-value {
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 850;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.benchmark-static-image {
+  display: block;
+  width: 100%;
+  max-width: 860px;
+  margin: 34px auto 0;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
 .capability-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -528,6 +658,15 @@ h1 {
 
   .capability-grid {
     grid-template-columns: 1fr;
+  }
+
+  .benchmark-comparison-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benchmark-row {
+    grid-template-columns: minmax(142px, 1fr) minmax(72px, 0.88fr) 38px;
+    gap: 8px;
   }
 }
 

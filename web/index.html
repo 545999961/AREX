@@ -26,12 +26,16 @@
           <span class="side-nav-index">01</span>
           <span class="side-label">Overview</span>
         </a>
-        <a href="#capabilities">
+        <a href="#benchmarks">
           <span class="side-nav-index">02</span>
+          <span class="side-label">Benchmarks</span>
+        </a>
+        <a href="#capabilities">
+          <span class="side-nav-index">03</span>
           <span class="side-label">Capabilities</span>
         </a>
         <a href="#release">
-          <span class="side-nav-index">03</span>
+          <span class="side-nav-index">04</span>
           <span class="side-label">Release</span>
         </a>
       </nav>
@@ -88,6 +92,29 @@
             </p>
           </section>
 
+          <section id="benchmarks" class="content-section benchmark-section" aria-labelledby="benchmarks-title">
+            <h2>Benchmarks</h2>
+            <h3 id="benchmarks-title">AREX across deep research evaluations</h3>
+            <p>
+              Snapshot from six search and reasoning benchmarks. Each panel
+              shows selected strong systems together with AREX-Base and
+              AREX-Turbo; bars use a local scale within each benchmark to make
+              close scores easier to compare.
+            </p>
+            <div
+              class="benchmark-comparison-grid"
+              id="benchmarkComparisonGrid"
+              aria-label="AREX benchmark comparison charts"
+            ></div>
+            <noscript>
+              <img
+                class="benchmark-static-image"
+                src="./figure/benchmark-snapshot.svg"
+                alt="AREX benchmark snapshot across BrowseComp, GAIA, xbench-2510, DeepSearchQA, WideSearch, and HLE."
+              />
+            </noscript>
+          </section>
+
           <section id="capabilities" class="content-section">
             <h2>Capabilities</h2>
             <h3>Built for long-horizon problem solving</h3>
@@ -123,7 +150,7 @@
               AREX is presented as a BAAI agent focused on deep search and
               reasoning capabilities for research-style tasks. The public
               announcement is available through
-              <a href="https://hub.baai.ac.cn/view/55514" target="_blank" rel="noopener">BAAI Hub</a>.
+              <a href="https://huggingface.co/BAAI" target="_blank" rel="noopener">BAAI</a>.
             </p>
           </section>
         </article>
@@ -134,5 +161,193 @@
         <span>BAAI</span>
       </footer>
     </div>
+    <script>
+      const AREX_LABELS = new Set(["AREX-base", "AREX-turbo"]);
+
+      const MODEL_ICONS = {
+        "GPT-5.4": "figure/openai.png",
+        "GPT-5": "figure/openai.png",
+        "Opus-4.8": "figure/claude.svg",
+        "Opus-4.6": "figure/claude.svg",
+        "Gemini-3.1-Pro": "figure/gemini.png",
+        "Gemini-3.0-Pro": "figure/gemini.png",
+        "GLM-5": "figure/glm.svg",
+        "Kimi-K2.6": "figure/kimi.webp",
+        "Kimi-K2.5": "figure/kimi.webp",
+        "DeepSeek-V4-Flash": "figure/deepseek.svg",
+        "DeepSeek-V4-Pro": "figure/deepseek.svg",
+        "Qwen3.5-35B": "figure/tongyi.png",
+        "Qwen3.5-122B": "figure/tongyi.png",
+        "Qwen3.5-397B": "figure/tongyi.png",
+        "Tongyi-DeepResearch": "figure/tongyi.png",
+        "Quest-35B": "figure/osu_nlp.png",
+        "MiroThinker-1.7-mini": "figure/mirothinker.png",
+        "MiroThinker-1.7": "figure/mirothinker.png",
+        "MiroThinker-H1": "figure/mirothinker.png",
+        "Fort-Searcher": "figure/rucaibox.png",
+        "AREX-base": "figure/arex.png",
+        "AREX-turbo": "figure/arex.png"
+      };
+
+      const benchmarkCharts = [
+        {
+          title: "BrowseComp",
+          bars: [
+            { label: "Kimi-K2.6", value: 86.3, role: "closed" },
+            { label: "AREX-base", value: 82.5, role: "arex-base" },
+            { label: "GLM-5", value: 79.3, role: "open" },
+            { label: "AREX-turbo", value: 70.7, role: "arex-turbo" },
+            { label: "Quest-35B", value: 64.6, role: "open" },
+            { label: "Qwen3.5-35B", value: 61.0, role: "open" },
+            { label: "GPT-5", value: 54.9, role: "closed" },
+            { label: "Tongyi-DeepResearch", value: 43.4, role: "open" }
+          ]
+        },
+        {
+          title: "GAIA",
+          bars: [
+            { label: "MiroThinker-H1", value: 88.5, role: "open" },
+            { label: "AREX-base", value: 85.4, role: "arex-base" },
+            { label: "DeepSeek-V4-Flash", value: 83.5, role: "closed" },
+            { label: "AREX-turbo", value: 81.6, role: "arex-turbo" },
+            { label: "Quest-35B", value: 80.8, role: "open" },
+            { label: "Gemini-3.1-Pro", value: 80.6, role: "closed" },
+            { label: "Qwen3.5-35B", value: 80.0, role: "open" },
+            { label: "GPT-5", value: 76.4, role: "closed" }
+          ]
+        },
+        {
+          title: "xbench-2510",
+          bars: [
+            { label: "Kimi-K2.6", value: 90.0, role: "closed" },
+            { label: "AREX-base", value: 71.0, role: "arex-base" },
+            { label: "MiroThinker-1.7", value: 62.0, role: "open" },
+            { label: "AREX-turbo", value: 57.0, role: "arex-turbo" },
+            { label: "Tongyi-DeepResearch", value: 55.0, role: "open" },
+            { label: "Gemini-3.1-Pro", value: 53.0, role: "closed" },
+            { label: "Qwen3.5-35B", value: 50.3, role: "open" }
+          ]
+        },
+        {
+          title: "DeepSearchQA",
+          bars: [
+            { label: "Gemini-3.1-Pro", value: 93.3, role: "closed" },
+            { label: "AREX-base", value: 89.9, role: "arex-base" },
+            { label: "MiroThinker-H1", value: 80.6, role: "open" },
+            { label: "AREX-turbo", value: 78.5, role: "arex-turbo" },
+            { label: "Gemini-3.0-Pro", value: 76.9, role: "closed" },
+            { label: "MiroThinker-1.7", value: 72.1, role: "open" },
+            { label: "MiroThinker-1.7-mini", value: 67.9, role: "open" }
+          ]
+        },
+        {
+          title: "WideSearch",
+          bars: [
+            { label: "AREX-base", value: 82.0, role: "arex-base" },
+            { label: "Kimi-K2.6", value: 80.8, role: "closed" },
+            { label: "Qwen3.5-397B", value: 74.0, role: "open" },
+            { label: "Qwen3.5-122B", value: 73.2, role: "open" },
+            { label: "AREX-turbo", value: 68.5, role: "arex-turbo" },
+            { label: "Quest-35B", value: 64.5, role: "open" },
+            { label: "GPT-5", value: 59.7, role: "closed" },
+            { label: "Gemini-3.0-Pro", value: 57.0, role: "closed" }
+          ]
+        },
+        {
+          title: "HLE",
+          bars: [
+            { label: "GPT-5.4", value: 52.1, role: "closed" },
+            { label: "AREX-base", value: 51.8, role: "arex-base" },
+            { label: "Qwen3.5-397B", value: 48.3, role: "open" },
+            { label: "AREX-turbo", value: 40.6, role: "arex-turbo" },
+            { label: "Quest-35B", value: 37.6, role: "open" },
+            { label: "MiroThinker-1.7-mini", value: 36.4, role: "open" },
+            { label: "GPT-5", value: 35.2, role: "closed" },
+            { label: "Tongyi-DeepResearch", value: 32.9, role: "open" }
+          ]
+        }
+      ];
+
+      const roleColors = {
+        "arex-base": "#002fa7",
+        "arex-turbo": "#0b8f78",
+        closed: "#1f2937",
+        open: "#64748b"
+      };
+
+      const benchmarkGrid = document.getElementById("benchmarkComparisonGrid");
+
+      if (benchmarkGrid) {
+        benchmarkCharts.forEach((benchmark) => {
+          const sorted = [...benchmark.bars].sort((a, b) => b.value - a.value);
+          const maxValue = Math.max(...sorted.map((bar) => bar.value));
+          const minValue = Math.min(...sorted.map((bar) => bar.value));
+          const valueRange = Math.max(maxValue - minValue, 1);
+
+          const card = document.createElement("section");
+          card.className = "benchmark-card";
+
+          const heading = document.createElement("div");
+          heading.className = "benchmark-card-heading";
+
+          const title = document.createElement("h4");
+          title.textContent = benchmark.title;
+          heading.appendChild(title);
+
+          card.appendChild(heading);
+
+          const chart = document.createElement("div");
+          chart.className = "benchmark-chart";
+          chart.setAttribute("role", "img");
+          chart.setAttribute("aria-label", `${benchmark.title} benchmark comparison`);
+
+          sorted.forEach((bar) => {
+            const row = document.createElement("div");
+            row.className = `benchmark-row${AREX_LABELS.has(bar.label) ? " is-arex" : ""}`;
+
+            const label = document.createElement("span");
+            label.className = "benchmark-label";
+
+            const iconSrc = MODEL_ICONS[bar.label];
+            if (iconSrc) {
+              const icon = document.createElement("img");
+              icon.className = "benchmark-icon";
+              icon.src = iconSrc;
+              icon.alt = "";
+              icon.loading = "lazy";
+              label.appendChild(icon);
+            }
+
+            const name = document.createElement("span");
+            name.className = "benchmark-name";
+            name.textContent = bar.label;
+            name.title = bar.label;
+            label.appendChild(name);
+            row.appendChild(label);
+
+            const track = document.createElement("span");
+            track.className = "benchmark-track";
+
+            const fill = document.createElement("span");
+            fill.className = "benchmark-fill";
+            const localWidth = 18 + ((bar.value - minValue) / valueRange) * 82;
+            fill.style.setProperty("--bar-width", `${localWidth}%`);
+            fill.style.setProperty("--bar-color", roleColors[bar.role] || roleColors.open);
+            track.appendChild(fill);
+            row.appendChild(track);
+
+            const value = document.createElement("span");
+            value.className = "benchmark-value";
+            value.textContent = bar.value.toFixed(bar.value % 1 === 0 ? 0 : 1);
+            row.appendChild(value);
+
+            chart.appendChild(row);
+          });
+
+          card.appendChild(chart);
+          benchmarkGrid.appendChild(card);
+        });
+      }
+    </script>
   </body>
 </html>
