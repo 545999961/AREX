@@ -34,16 +34,12 @@
           <span class="side-nav-index">03</span>
           <span class="side-label">Capabilities</span>
         </a>
-        <a href="#training">
-          <span class="side-nav-index">04</span>
-          <span class="side-label">Training</span>
-        </a>
         <a href="#use-cases">
-          <span class="side-nav-index">05</span>
+          <span class="side-nav-index">04</span>
           <span class="side-label">Use Cases</span>
         </a>
         <a href="#release">
-          <span class="side-nav-index">06</span>
+          <span class="side-nav-index">05</span>
           <span class="side-label">Release</span>
         </a>
       </nav>
@@ -112,8 +108,8 @@
               stop and synthesize.
             </p>
             <p>
-              The system is trained for deep search, broad investigation, paper
-              reading, and expert-style verification scenarios. Its goal is to make
+              AREX supports deep search, broad investigation, paper reading, and
+              expert-style verification scenarios. Its goal is to make
               research agents both capable and deployable: strong reasoning and tool
               use with a smaller active compute footprint.
             </p>
@@ -168,41 +164,6 @@
                 </p>
               </div>
             </div>
-          </section>
-
-          <section id="training" class="content-section training-section">
-            <h2>Training</h2>
-            <h3>A staged recipe for research behavior</h3>
-            <p>
-              AREX uses a progressive training pipeline that first establishes
-              reliable tool and reasoning behavior, then improves long-horizon
-              decision making through agentic reinforcement learning.
-            </p>
-            <div class="training-grid" aria-label="AREX training stages">
-              <div class="process-card">
-                <span>01</span>
-                <h4>Capability-Oriented Synthetic Data</h4>
-                <p>High-quality trajectories for deep research, broad survey, paper reading, and expert verification tasks.</p>
-              </div>
-              <div class="process-card">
-                <span>02</span>
-                <h4>Supervised Fine-Tuning</h4>
-                <p>Establishes the base tool-calling format, research loop structure, and stepwise reasoning behavior.</p>
-              </div>
-              <div class="process-card">
-                <span>03</span>
-                <h4>Agentic Reinforcement Learning</h4>
-                <p>Rewards decisions about when to search, when to stop, and how to summarize evidence efficiently.</p>
-              </div>
-              <div class="process-card">
-                <span>04</span>
-                <h4>Mixed-Domain Consolidation</h4>
-                <p>Integrates multiple task domains to stabilize performance and reduce catastrophic forgetting.</p>
-              </div>
-            </div>
-            <p class="data-note">
-              Training data is kept separate from public benchmark test sets to protect evaluation integrity.
-            </p>
           </section>
 
           <section id="use-cases" class="content-section">

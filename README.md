@@ -22,7 +22,6 @@ AREX focuses on agentic research workflows that require deep search, multi-step 
 - [Introduction](#introduction)
 - [Model Variants](#model-variants)
 - [Key Capabilities](#key-capabilities)
-- [Training Recipe](#training-recipe)
 - [Use Cases](#use-cases)
 - [Benchmark Evaluation](#benchmark-evaluation)
 - [Resources](#resources)
@@ -52,17 +51,6 @@ This efficiency-first design helps reduce unnecessary tool calls and inference l
 - **Agentic Context Management**: Treats context as an active workspace. AREX can decide when to preserve notes, compress old reasoning, and retrieve important evidence.
 - **Robust Tool Use**: Supports complex browsing, retrieval, data analysis, and expert-style verification workflows across multiple rounds.
 - **Long-Horizon Reasoning**: Decomposes complex questions, follows intermediate findings, reconciles evidence, and synthesizes final answers.
-
-## Training Recipe
-
-AREX uses a progressive multi-stage training pipeline:
-
-1. **Capability-Oriented Synthetic Data Construction**: High-quality trajectories are generated for deep research, broad investigation, paper reading, and expert verification scenarios.
-2. **Supervised Fine-Tuning**: The model learns the basic tool-calling format, research loop structure, and stepwise reasoning behavior.
-3. **Agentic Reinforcement Learning**: Reward models guide decisions about when to search, when to stop, and how to summarize evidence efficiently.
-4. **Mixed-Domain Consolidation**: Multi-task data is integrated to stabilize performance and reduce catastrophic forgetting.
-
-Training data is kept separate from public benchmark test sets to protect evaluation integrity.
 
 ## Use Cases
 
