@@ -26,6 +26,7 @@ https://545999961.github.io/AREX/
 - [Introduction](#introduction)
 - [Key Capabilities](#key-capabilities)
 - [Resources](#resources)
+- [Star History](#star-history)
 - [Repository Layout](#repository-layout)
 - [Citation](#citation)
 
@@ -50,6 +51,14 @@ AREX focuses on agentic research workflows where a single retrieval step is not 
 | Paper | Coming soon |
 | AREX-Turbo | Coming soon |
 | AREX-Base | Coming soon |
+
+## Star History
+
+<div align="center">
+
+[![Star History Chart](https://api.star-history.com/svg?repos=545999961/AREX&type=Date)](https://www.star-history.com/#545999961/AREX&Date)
+
+</div>
 
 ## Repository Layout
 
