@@ -4,11 +4,9 @@
 
 **A BAAI agent for deep search, reasoning, and research-oriented problem solving.**
 
-[![Website](https://img.shields.io/badge/Website-AREX-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://545999961.github.io/AREX/)
 [![Paper](https://img.shields.io/badge/Paper-Coming%20Soon-B31B1B?style=for-the-badge&logo=arxiv&logoColor=white)](#)
 [![AREX--Turbo](https://img.shields.io/badge/AREX--Turbo-Model-0B8F78?style=for-the-badge&logo=huggingface&logoColor=white)](#)
 [![AREX--Base](https://img.shields.io/badge/AREX--Base-Model-6D3CCF?style=for-the-badge&logo=huggingface&logoColor=white)](#)
-[![Code](https://img.shields.io/badge/Code-Coming%20Soon-24292F?style=for-the-badge&logo=github&logoColor=white)](#)
 
 </div>
 
@@ -49,11 +47,9 @@ AREX focuses on agentic research workflows where a single retrieval step is not 
 
 | Resource | Link |
 | --- | --- |
-| Website | [AREX Project Page](https://545999961.github.io/AREX/) |
 | Paper | Coming soon |
 | AREX-Turbo | Coming soon |
 | AREX-Base | Coming soon |
-| Code | Coming soon |
 
 ## Repository Layout
 
