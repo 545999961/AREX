@@ -12,9 +12,9 @@
 
 ## Overview
 
-AREX is a family of efficient foundation models designed for long-horizon deep research agents. We believe a real research agent should be not only capable, but also efficient: it should gather the most useful information within limited interaction steps, inference budgets, and deployment cost.
+AREX is a family of foundation models for research agents, designed for long-horizon deep research. We believe a real research agent should be not only capable, but also efficient: it should gather the most useful information within limited interaction steps, inference budgets, and deployment costs.
 
-AREX focuses on agentic research workflows that require deep search, multi-step reasoning, context management, and evidence synthesis. It can browse and retrieve information across sources, keep track of intermediate findings, decide when to compress or preserve context, and produce grounded answers for complex research-style problems.
+AREX focuses on agentic research workflows that require deep search, multi-step reasoning, context management, and evidence synthesis. It can browse and retrieve information across sources, keep track of intermediate findings, decide when to compress or preserve context, and produce grounded answers for open-ended research problems.
 
 ## Table of Contents
 
@@ -71,7 +71,7 @@ Covered benchmarks include:
 
 <div align="center">
 
-![AREX benchmark snapshot](web/figure/benchmark-snapshot.svg)
+![AREX evaluation results](web/figure/benchmark-snapshot.svg)
 
 </div>
 

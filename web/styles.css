@@ -476,6 +476,12 @@ h1 {
   margin-top: 34px;
 }
 
+.benchmark-note {
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
 .benchmark-card {
   min-width: 0;
   padding: 16px;

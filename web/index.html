@@ -6,7 +6,7 @@
     <title>AREX | BAAI</title>
     <meta
       name="description"
-      content="AREX is a family of efficient long-horizon research agents with agentic context management, robust tool use, and strong deep-search reasoning."
+      content="AREX is a family of foundation models for research agents, with agentic context management, robust tool use, and strong deep-search reasoning."
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -28,7 +28,7 @@
         </a>
         <a href="#benchmarks">
           <span class="side-nav-index">02</span>
-          <span class="side-label">Benchmarks</span>
+          <span class="side-label">Evaluation</span>
         </a>
         <a href="#capabilities">
           <span class="side-nav-index">03</span>
@@ -56,13 +56,13 @@
           <section class="cover" aria-labelledby="title">
             <div class="article-meta-row">
               <span>BAAI</span>
-              <span>Efficient Long-Horizon Research Agents</span>
+              <span>Foundation Models for Research Agents</span>
             </div>
             <h1 id="title">AREX</h1>
             <p class="lead">
-              AREX is a family of efficient foundation models for deep research agents:
+              AREX is a family of foundation models for research agents:
               built to gather high-value evidence, manage long contexts autonomously,
-              and solve research-style problems under practical interaction and compute budgets.
+              and solve open-ended research problems under practical interaction and compute budgets.
             </p>
             <p class="affiliation">Beijing Academy of Artificial Intelligence</p>
 
@@ -99,11 +99,11 @@
 
           <section id="overview" class="content-section">
             <h2>Overview</h2>
-            <h3>Research agents that optimize information gain</h3>
+            <h3>Get more signal from every search</h3>
             <p>
               AREX is designed for long-horizon tasks where a single retrieval step
               is not enough. Instead of relying only on larger inference budgets,
-              AREX emphasizes efficient agent behavior: when to search, what to read,
+              AREX focuses on how the agent behaves: when to search, what to read,
               which evidence to keep, when to compress prior reasoning, and when to
               stop and synthesize.
             </p>
@@ -116,24 +116,28 @@
           </section>
 
           <section id="benchmarks" class="content-section benchmark-section" aria-labelledby="benchmarks-title">
-            <h2>Benchmarks</h2>
+            <h2>Evaluation</h2>
             <h3 id="benchmarks-title">AREX across deep research evaluations</h3>
             <p>
-              Snapshot from six search and reasoning benchmarks. Each panel
-              shows selected strong systems together with AREX-Base and
-              AREX-Turbo; bars use a local scale within each benchmark to make
-              close scores easier to compare.
+              AREX delivers strong results across six search and reasoning
+              evaluations. Each panel compares AREX-Base and AREX-Turbo against
+              leading open and closed systems, with AREX-Base consistently ranking
+              among the top performers.
             </p>
             <div
               class="benchmark-comparison-grid"
               id="benchmarkComparisonGrid"
-              aria-label="AREX benchmark comparison charts"
+              aria-label="AREX evaluation comparison charts"
             ></div>
+            <p class="benchmark-note">
+              Bars use a local scale within each evaluation to make close scores
+              easier to compare.
+            </p>
             <noscript>
               <img
                 class="benchmark-static-image"
                 src="./figure/benchmark-snapshot.svg"
-                alt="AREX benchmark snapshot across BrowseComp, GAIA, xbench-2510, DeepSearchQA, WideSearch, and HLE."
+                alt="AREX evaluation results across BrowseComp, GAIA, xbench-2510, DeepSearchQA, WideSearch, and HLE."
               />
             </noscript>
           </section>
@@ -181,8 +185,8 @@
             <h2>Release</h2>
             <h3>AREX-Turbo and AREX-Base</h3>
             <p>
-              AREX is presented as a BAAI family of efficient long-horizon research
-              agents. Public model resources and the technical report will be linked
+              AREX is a BAAI family of efficient long-horizon research agents.
+              Public model resources and the technical report will be linked
               as they become available through
               <a href="https://huggingface.co/BAAI" target="_blank" rel="noopener">BAAI</a>.
             </p>
@@ -333,7 +337,7 @@
           const chart = document.createElement("div");
           chart.className = "benchmark-chart";
           chart.setAttribute("role", "img");
-          chart.setAttribute("aria-label", `${benchmark.title} benchmark comparison`);
+          chart.setAttribute("aria-label", `${benchmark.title} evaluation comparison`);
 
           sorted.forEach((bar) => {
             const row = document.createElement("div");
