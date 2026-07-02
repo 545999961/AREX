@@ -66,8 +66,8 @@ AREX is evaluated on public benchmarks covering browsing, retrieval, long-horizo
 Covered benchmarks include:
 
 - **BrowseComp** and **WideSearch** for browsing and retrieval.
-- **HLE**, **HLE with Tools**, and **GAIA** for long-horizon reasoning and tool interaction.
-- **DeepSearchQA** and **x-bench-2510** for open-domain deep search.
+- **HLE** and **GAIA** for long-horizon reasoning and tool interaction.
+- **DeepSearchQA** and **xbench-2510** for open-domain deep search.
 
 <div align="center">
 

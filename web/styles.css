@@ -14,7 +14,7 @@
   --base-link: #6d3ccf;
   --code-link: #24292f;
   --shadow: 0 18px 55px rgba(17, 24, 39, 0.09);
-  --content-width: 980px;
+  --content-width: 1160px;
 }
 
 * {
@@ -471,8 +471,8 @@ h1 {
 
 .benchmark-comparison-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
   margin-top: 34px;
 }
 
@@ -519,9 +519,9 @@ h1 {
 
 .benchmark-row {
   display: grid;
-  grid-template-columns: minmax(154px, 1.25fr) minmax(92px, 1fr) 42px;
+  grid-template-columns: minmax(124px, 1.18fr) minmax(78px, 1fr) 38px;
   align-items: center;
-  gap: 9px;
+  gap: 8px;
   min-height: 30px;
   padding: 2px 0;
 }
@@ -584,14 +584,14 @@ h1 {
   color: var(--text);
   font-size: 0.82rem;
   font-weight: 850;
-  text-align: right;
+  text-align: center;
   font-variant-numeric: tabular-nums;
 }
 
 .benchmark-static-image {
   display: block;
   width: 100%;
-  max-width: 860px;
+  max-width: 1040px;
   margin: 34px auto 0;
   border: 1px solid var(--line);
   border-radius: 14px;
@@ -671,6 +671,12 @@ h1 {
   content: "/";
   margin-right: 14px;
   color: var(--line-strong);
+}
+
+@media (max-width: 1100px) {
+  .benchmark-comparison-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 760px) {
